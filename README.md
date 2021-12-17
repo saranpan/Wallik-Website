@@ -1,5 +1,4 @@
-# Deploy-model-Iris.csv
-Using Flask to deploy the model
+# Wallik Brain website
 
 © Wallik Website : https://wallik.herokuapp.com/
 
