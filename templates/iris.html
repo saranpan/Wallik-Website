@@ -2,7 +2,8 @@
 
 {% block content %}
 
-<div class="login">
+
+<div class="login m3 p-5">
     <hr>
 	<h1>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Iris flower species classifier</h1>
     <hr>
@@ -14,12 +15,12 @@
     <br><br>
      <form action="{{ url_for('predict')}}"method="post">
     	&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-        <input type="text" name="Sepal length" placeholder="Sepal length" required="required" />
-        <input type="text" name="Sepal Width" placeholder="Sepal Width" required="required" />
-		<input type="text" name="Petal length" placeholder="Petal length" required="required" />
-        <input type="text" name="Petal Width" placeholder="Petal Width" required="required" />
+        <input type="text" name="Sepal length" placeholder="Sepal length (cm)" required="required" />
+        <input type="text" name="Sepal Width" placeholder="Sepal Width (cm)" required="required" />
+		<input type="text" name="Petal length" placeholder="Petal length (cm)" required="required" />
+        <input type="text" name="Petal Width" placeholder="Petal Width (cm)" required="required" />
         
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        <button type="submit" class="btn btn-success btn-block btn-large">Predict</button>
     </form>
    
     

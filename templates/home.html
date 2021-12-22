@@ -2,8 +2,28 @@
 
 {% block content %}
 
-<h1>Hi I'm Run</h1>
-
-This website is created for let everyone approach Machine Learning with just inputing data :)
+ <!--main img & intro text-->
+ <section id="intro">
+    <div class="container-lg">
+            <!--X axis center of the text and img are the same (align-items-center)-->
+      <div class="row justify-content-center align-items-center">
+        <!--medium : 5 , unless : 12-->
+        <div class="col-md-5 text-center text-md-start">
+           <h1>
+            <div class="display-2">Play Kiddy AI</div>
+            <div class="display-5 text-muted">with your own click</div>
+           </h1>
+           <p class="lead my-4 text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+  
+           <a href="/iris" class="btn btn-secondary btn-large">Play now</a>
+        </div>
+      <!--we don't show any object for default (no container), but when display when md -->
+        <div class="col-md-5 d-none d-md-block">
+       <!--the size of img depends on the size of screen (img-fluid) -->    
+          <img class="img-fluid" src="static/logo.jpg" alt="book">
+        </div>
+      </div>
+    </div>
+    </section>
 
 {% endblock %}
