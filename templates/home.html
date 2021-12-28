@@ -1,29 +1,334 @@
-{% extends "layout.html" %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallik</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <style>
+    section{
+      padding: 60px 0;
+    }
+  </style>
+</head>
+<body>
 
-{% block content %}
-
- <!--main img & intro text-->
- <section id="intro">
-    <div class="container-lg">
-            <!--X axis center of the text and img are the same (align-items-center)-->
-      <div class="row justify-content-center align-items-center">
-        <!--medium : 5 , unless : 12-->
-        <div class="col-md-5 text-center text-md-start">
-           <h1>
-            <div class="display-2">Play Kiddy AI</div>
-            <div class="display-5 text-muted">with your own click</div>
-           </h1>
-           <p class="lead my-4 text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-md navbar-light pt-5 pb-4">
+    <button type="button" class="rounded"  
+    data-bs-toggle="offcanvas" data-bs-target="#sidebar" 
+    aria-controls="sidebar">
+    <img src="../static/sidebar-icon.jpg" alt="side_bar" style='width: 40;height:40;'>
   
-           <a href="/iris" class="btn btn-secondary btn-large">Play now</a>
+  </button>
+    <div class="container-xxl">
+      <!-- navbar brand / title -->
+      <a class="navbar-brand" href="/">
+        <span class="text-secondary fw-bold">
+          <img src="../static/logo.jpg" alt="" style="width: 40; height:40;">
+          Wallik Brain
+        </span>
+      </a>
+      <!-- toggle button for mobile nav -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- navbar links -->
+      <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#Recommended">Recommended task</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#deploy">Deployment request</a>
+          </li>
+
+          <li class="nav-item ms-2 d-none d-md-inline">
+            <a class="btn btn-secondary" href="#pricing">Try now</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- main image & intro text -->
+  <section id="intro">
+    <div class="container-lg">
+      <div class="row g-4 justify-content-center align-items-center">
+        <div class="col-md-5 text-center text-md-start">
+          <h1>
+            <div class="display-2">Try Kiddy AI</div>
+            <div class="display-5 text-muted">with your own click</div>
+          </h1>
+          <p class="lead my-4 text-muted">AI Designed by Wallik</p>
+          <a href="#Recommended" class="btn btn-secondary btn-lg">Try Now</a>
+          <!-- open sidebar / offcanvas -->
         </div>
-      <!--we don't show any object for default (no container), but when display when md -->
-        <div class="col-md-5 d-none d-md-block">
-       <!--the size of img depends on the size of screen (img-fluid) -->    
-          <img class="img-fluid" src="static/logo.jpg" alt="book">
+        <div class="col-md-5 text-center d-none d-md-block">
+          <!-- tooltip -->
+          <span class="tt" data-bs-placement="bottom" title="You are tickling me xD">
+            <img src="../static/logo.jpg" class="img-fluid" alt="ebook">
+          </span>
         </div>
       </div>
     </div>
-    </section>
+  </section>
 
-{% endblock %}
+  <!-- pricing plans -->
+  <section id="Recommended" class="bg-light mt-5">
+    <div class="container-lg">
+      <div class="text-center">
+        <h2><i class="bi bi-award"></i></i>Recommended Task</h2>
+        <p class="lead text-muted">Try play one of these three AI</p>
+      </div>
+  
+      <div class="row my-5 g-3 align-items-center justify-content-center">
+        <div class="col-8 col-lg-4 col-xl-3">
+  
+           <!-- Card 1 (L)-->
+          <div class="card border-0 text-white bg-dark">
+  
+            <div class="card-body text-center py-4">
+              <img class="card-img mb-2" src="" alt="Card image" style="width:112;height:112;">
+  
+              <h4 class="card-title">Coming soon</h4>
+  
+              <p class="lead card-subtitle">Lorem ipsum dolor sit</p>
+  
+              <p class="display-5 my-4 text-primary fw-bold">N/A</p>
+              
+              <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, vitae magni! Repellat commodi a fuga corporis saepe dolorum.</p>
+              
+              <a href="#" class="btn btn-outline-primary btn-lg mt-3">
+                Try Now
+              </a>
+  
+            </div>
+          </div>
+        </div>
+        
+          <!-- Card 2 (center)-->
+        <div class="col-9 col-lg-4">
+          <div class="card border-secondary border-2 ">
+            
+            <div class="card-header text-center text-success">Most Popular</div>
+            <!-- padding : 5 to look bigger among other card-->
+            <div class="card-body text-center py-5">
+              <img class="card-img mb-2 rounded" src="../static/iris_explanation.png" alt="Card image" style="width:112;height:112;">
+              
+
+              <p class="display-6 my-4 text-success fw-bold">Iris Classification</p>
+              <p class="card-text mx-5">Predict the species of Iris</p>
+              <p class="card-text mx-5 text-muted">All you need are</p>
+              <div class="card-text text-muted">
+                <li>Sepal width</li>
+                <li>Sepal length</li>
+                <li>Petal width</li>
+                <li>Petal length</li>
+              </div>
+              <a href="/1_iris" class="btn btn-outline-success btn-lg mt-3">
+                Try Now
+              </a>
+            </div>
+          </div>
+        </div>
+  
+          <!-- Card 3 (R)-->      
+        <div class="col-8 col-lg-4 col-xl-3">
+          <div class="card border-0 text-white bg-dark">
+            <div class="card-body text-center py-4">
+              <img class="card-img mb-4" src="" alt="Card image" style="width:112;height:112;">
+              <h4 class="card-title">Coming soon</h4>
+              <p class="lead card-subtitle">Lorem ipsum dolor sit </p>
+              <p class="display-5 my-4 text-primary fw-bold">N/A</p>
+              <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, vitae magni! Repellat commodi a fuga corporis saepe dolorum.</p>
+              <a href="#" class="btn btn-outline-primary btn-lg mt-3">
+                Try Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+    </div><!-- end container -->
+  </section>
+
+
+
+
+
+  <!-- deploy form -->
+  <!-- form-control, form-label, form-select, input-group, input-group-text -->
+  <section id="deploy">
+    <div class="container-lg">      
+
+      <form>  
+      <div class="text-center">
+        <h2>Wanna deploy your model?</h2>
+        <p class="lead">Questions to ask? Fill out the form to deploy me directly...</p>
+      </div>
+      <div class="row justify-content-center my-5">
+        <div class="col-lg-6">
+          
+          <!-- Form layout -->
+          <div>
+          <!-- 1) Name - Surname -->
+          <label for="name" class="form-label">Name:</label>
+
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+            </div>
+          </div>
+
+
+
+          <!-- 2) Email -->
+            <label for="email" class="form-label">Email address:</label>
+            <div class="input-group mb-4">
+              <span class="input-group-text">
+                <i class="bi bi-envelope-fill text-secondary"></i>
+              </span>
+              <input type="text" id="email" class="form-control" placeholder="e.g. mario@example.com">
+              
+              <!--tooltip added-->
+              <span class="input-group-text">
+                <span class="tt" data-bs-placement="bottom" title="We will deploy you via this email">
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
+              </span>
+
+            </div>
+
+          <!-- 3) Question (selection) 
+          input-group-text : grey background-->          
+          <label for="subject" class="form-label">Which type of machine learning you are about</label>
+          <div class="mb-4 input-group">
+            <span class="input-group-text">
+              <i class="bi bi-collection text-secondary"></i>
+            </span>
+            <select class="form-select" id="subject">
+              <option value="pricing" selected>Tabular data</option>
+              <option value="content">Computer vision</option>
+              <option value="other">Natural Language Processing</option>
+            </select>
+
+            <!--attach the new input group text object (w/ tootip)-->
+            <span class="input-group-text">
+              <span class="tt" data-bs-placement="bottom" 
+              title="Tabular data is structured data, Computer vision is about image, NLP is about language">
+                
+                <i class="bi bi-question-circle text-muted"></i>
+              </span>
+            </span>
+
+
+          </div>
+
+
+          <!-- 4) Your query 
+          input-group-text : grey background-->     
+            <div class="mb-4 mt-3 form-floating">
+              <textarea class="form-control" id="query" style="height: 140px" placeholder="query"></textarea>
+              <label for="query">Describe your model</label>
+            </div>
+
+          <!--6) Submit button-->
+            <div class="mb-4 text-center">
+              <button type="submit" class="btn btn-secondary">Submit</button>
+            </div>
+
+
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- get updates / modal trigger -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="text-center">
+        <h2>Stay in The Loop</h2>
+        <p class="lead">Get the latest updates when the new model arrived</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <p class="text-muted my-4">
+            When there is a new model, it will send you a notification to let you try my new model
+          </p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-modal">
+            Register for Updates
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- modal itself -->
+  <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-title">Get the Latest Updates</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body justify-content-center">
+          <p>We will announce to you via your registered email when new AI prediction task is arrived</p>
+          <label for="modal-email" class="form-label">Your email address:</label>
+          <input type="text" class="form-control" id="modal-email" placeholder="e.g. mario@example.com">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- side panel / offcanvas -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebar-label">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="sidebar-label">Wallik side bar</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a href="/about" class="nav-link text-secondary lead">About us</a>
+      
+      <hr>
+      <!-- dropdown -->
+      <div class="dropdown mt-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="book-dropdown" data-bs-toggle="dropdown">
+          AI Prediction task
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="book-dropdown">
+          <li><a class="dropdown-item" href="#">Iris Classification</a></li>
+          <li><a class="dropdown-item" href="#">Titanic survival prediction</a></li>
+          <li><a class="dropdown-item" href="#">....</a></li>
+        </ul>
+      </div>
+
+
+ 
+
+    </div>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script>
+    const tooltips = document.querySelectorAll('.tt')
+    tooltips.forEach(t => {
+      new bootstrap.Tooltip(t)
+    })
+  </script>
+</body>
+</html>

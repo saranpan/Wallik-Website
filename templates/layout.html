@@ -14,40 +14,34 @@
   <!--Nav-->
   <!--preserve the area for nav-->
   <!--expand the collapse for lg screen-->
-  <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
-    <div class="container-fluid">
-      <img src="../static/logo2.png" alt="logo" width="40" height="40">
-      <a class="navbar-brand" href="/">Wallik-Brain</a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-xxl">
+      <!-- navbar brand / title -->
+      <a class="navbar-brand" href="/">
+        <span class="text-secondary fw-bold">
+          <img src="../static/logo.jpg" alt="" style="width: 40; height:40;">
+          Wallik Brain Lab
+        </span>
+      </a>
+      <!-- toggle button for mobile nav -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!--toggle for mobile screen
-      (id=navbarNav) since collapese from the above to this class-->
-
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <!-- navbar links -->
+      <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/about">About us</a>
+            <a class="nav-link" href="#Recommended">Recommended task</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Want to deploy?</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Get In Touch</a>
+            <a class="nav-link" href="#deploy">Deployment request</a>
           </li>
 
-          <!--Don't show this nav item ('Buy now') in PC-->
-          <li class="nav-item d-md-none">
-            <a class="nav-link" href="/iris" tabindex="-1" aria-disabled="true">Play now</a>
+          <li class="nav-item ms-2 d-none d-md-inline">
+            <a class="btn btn-secondary" href="#pricing">Try now</a>
           </li>
-          <!--Don't show this nav item ('Pricing') in Mobile-->
-          <li class="nav-item d-none d-md-inline">
-            <a class="btn btn-secondary" href="/iris" tabindex="-1" aria-disabled="true">Play now</a>  
-          </li>
+          
         </ul>
       </div>
     </div>

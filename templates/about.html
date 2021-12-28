@@ -2,26 +2,59 @@
 
 {% block content %}
 
-<div class="container my-5">
-    <div class="row"></div>
+<div class="container-lg m-4 p-5 border border-primary border-2">
+    <div class="text-center">
+        <div class= "row justify-content-end align-items-center">
+            <div class="col-5">
+                <h2>Hej!</h2>
+
+                  <p class='lead'>Hi, I'm Saran Pannasuriyaporn. I'm currently a junior student who enthusiastic about Machine learning</p>
+
+                    
+
+                  <p class='lead'>I have decided to create to this website. All the reason I did is because I want
+                      to encourage people especially Aspiring data scientist to run their own machine learning model.
+                      
+                      Sometime, It might be complicated to deploy their own model for end user reason,
+                      so, with this purpose, I want them to instantly run end-user zone of their machine learning.
+
+                      So it becomes more practical...</p>
+
+                   <p class="lead mt-5">You can contact me via here</p>
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-4">
+                                <a href="https://www.youtube.com/channel/UCDJ1y-YCpuZudh_S4wXYjpA/">
+                                    <img src="../static/Youtube.png" alt="" style="width: 50;height: 30;">
+                                </a>
+                            </div>
+                            
+                            <div class="col-4">
+                                <a href="https://github.com/wallik2">
+                                    <img src="../static/Github.png" alt="" style="width: 30;height: 30;">
+                                </a>
+                            </div>
+                            
+                            <div class="col-4">
+                                <a href="https://www.linkedin.com/in/saran-pannasuriyaporn-1104071ab/">
+                                    <img src="../static/Linkedin.png" alt="" style="width: 50;height: 50;">
+                                </a>
+                            </div>
+                        </div>
+                      
+
+                  </div>
+                
+                <div class="col-md-5 text-center">
+                  <!-- tooltip -->
+                  <span class="tt" data-bs-placement="bottom" title="You are tickling me xD">
+                    <img src="../static/sar3.jpg" class="img-fluid rounded-circle" alt="me">
+                  </span>
+
+
+            </div>
+        </div>
+
+    </div>
 </div>
 
-<div class="container m-5 p-4">
-    <h1>  Iris flower species classification by Wallik</h1> 
-    we use the decision tree model to predict the species of iris flower using the following 
-    features
-    <br>
-    <br>
-    <li> Sepal length</li>
-    <li> Sepal width</li>
-    <li> Petal length</li>
-    <li> Petal width</li>
-    <br>
-    <img src="../static/iris_explanation.png" alt="iris" width="500" height="500">
-
-    <br>
-    <br>
-    This webpage is created by <b>Saran Pannasuriyaporn</b> using Flask framework.
-    
-</div>
-    {% endblock %}
+{% endblock %}

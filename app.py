@@ -36,13 +36,13 @@ def about():
 
 
 
-@app.route('/iris')
+@app.route('/1_iris')
 def iris():
-    return render_template('iris.html')
-    #return render_template('iris.html')
+    return render_template('1_iris.html')
+
 
 # /predict to the result
-@app.route('/iris',methods=['POST'])
+@app.route('/1_iris',methods=['POST'])
 def predict():
     '''For rendering results on HTML GUI'''
     # Receive the input from the POST request.
@@ -58,7 +58,7 @@ def predict():
     feature_name = ['Sepal Length (cm)', 'Sepal Width (cm)', 'Petal Length (cm)', 'Petal Width (cm)']   
     prediction_text = f'This is {output}'
 
-    return render_template('iris.html', character = zip(feature_name,inputs), prediction_text=prediction_text)
+    return render_template('1_iris.html', character = zip(feature_name,inputs), prediction_text=prediction_text)
 
 
 

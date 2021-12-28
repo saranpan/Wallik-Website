@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="login p-1 mt-3 justify-content-center">
+    <div class="text-center">
+        <div class="row justify-content-center align-items-center my-5">
+            <div class='col-md-8'>
+                <p class='display-2'>Iris flower species classifier</p>
+
+                <!-- Main Input For Receiving Query to our ML -->
+
+                
+                <img src="../static/iris_explanation.png" alt="iris" 
+                class="m-4"  style="width=300; height=300;">
+                <br><br>
+
+                <div class="row justify-content-center align-items-center my-5">
+                    <form action="{{ url_for('predict')}}"method="post">
+                    
+                    <input type="text" name="Sepal length" placeholder="Sepal length (cm)" required="required" >
+                    <input type="text" name="Sepal Width" placeholder="Sepal width (cm)" required="required" >
+                    <input type="text" name="Petal length" placeholder="Petal length (cm)" required="required" >
+                    <input type="text" name="Petal Width" placeholder="Petal width (cm)" required="required" > --> 
+
+                    <button type="submit" class="btn btn-success btn-block btn-large">Predict</button>
+                </form>
+            
+                
+            <hr>
+
+
+                <!-- Result of our ML -->
+
+            <center><h2>{{prediction_text}}</h2></center>
+
+            {% for specie , item in character%}
+                <center><p>&emsp;{{specie}} : {{item}}</p></center>
+            {% endfor %}
+            </div>   
+        </div>
+    </div>    
+ </div>
+
+<br><br><br><br>
+
+{% endblock %}
